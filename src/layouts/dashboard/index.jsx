@@ -54,7 +54,6 @@ const DashboardLayout = () => {
   const theme = useTheme();
 
   const { onToggleMode } = useSettings();
-  console.log("onToggleMode",onToggleMode)
   const [selectedTab, setSelectedTab] = React.useState(0);
 
   const handleChangeTab = (index) => {
@@ -118,7 +117,7 @@ const DashboardLayout = () => {
                   </Box>
                   :
                   <IconButton onClick={() => {
-                    setSelectedTab(el.index);
+                    handleChangeTab(el.index);
                   }}
                     sx={{ width: "max-content", color: theme.palette.mode === 'light' ? "#000" : "#fff" }}
                     key={el.index}
@@ -145,7 +144,7 @@ const DashboardLayout = () => {
                 <IconButton
                   sx={{ width: "max-content", color: theme.palette.mode === 'light' ? "#000" : "#fff" }}
                   onClick={() => {
-                    setSelectedTab(3);
+                    handleChangeTab(3);
                   }}
                 >
                   <Gear />
@@ -158,7 +157,7 @@ const DashboardLayout = () => {
             <AntSwitch
             onChange = {()=>{
               onToggleMode();
-              console.log("theme",theme.palette.mode)
+              
             }}
             defaultChecked />
             <Avatar src={faker.image.avatar()} />
