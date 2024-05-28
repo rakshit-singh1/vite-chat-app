@@ -5,7 +5,7 @@ const GeneralApp = () => {
 
   return (
     <Suspense fallback="Loading...">
-        
+        gg
     </Suspense>
   );
 };

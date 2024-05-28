@@ -62,7 +62,7 @@ const DashboardLayout = () => {
   };
 
   return (
-    <>
+    <Stack direction={"row"}>
       <Box
         sx={{
           height: "100vh",
@@ -166,7 +166,7 @@ const DashboardLayout = () => {
         </Stack >
       </Box >
       <Outlet />
-    </>
+    </Stack>
   );
 };
 
